@@ -12,7 +12,7 @@ if (isset($_POST["captcha"])) {
 		$msg = "Wrong code";
 	} else {
 		unset($_SESSION["captcha"]);
-		die("<h1>Code accepted</h1>");
+		die("<h1>Code accepted</h1><a href=''>Try again</a>");
 	}
 } else {
 	$msg = "";
@@ -35,7 +35,7 @@ $_SESSION["captcha"] = $captcha->getCode();
 	<h1><?=$msg;?></h1>
 	<img src="<?=$captcha->base64();?>" />
 	<form method="post" action="">
-		<input type="text" name="captcha" value="<?=$captcha->getCode();?>" />
+		<input type="text" name="captcha" value="" />
 		<input type="submit" value="Submit" />
 	</form>
 </body>

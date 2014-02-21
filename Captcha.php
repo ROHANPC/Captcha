@@ -29,7 +29,7 @@ class Captcha
 			// you can pass your own code or set to false for random
 			"code"                     => false,
 			// quality
-			"quality"                  => 7,
+			"quality"                  => 15,
 		);
 
 		// Override default options
