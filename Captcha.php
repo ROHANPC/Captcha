@@ -84,6 +84,12 @@ class Captcha
 		return "data:image/jpeg;base64," . base64_encode($this->get());
 	}
 
+	/**
+	 * Draws a captcha code on the image canvas.
+	 *
+	 * @param  resource $image
+	 * @return void
+	 */
 	protected function writeCode($image)
 	{
 		$code = $this->config["code"];
@@ -111,6 +117,11 @@ class Captcha
 		}
 	}
 
+	/**
+	 * Generates a code.
+	 *
+	 * @return string
+	 */
 	protected function genCode()
 	{
 		$code = "";
