@@ -136,4 +136,3 @@ class Captcha
 		return $code;
 	}
 }
-
