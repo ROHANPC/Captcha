@@ -44,9 +44,24 @@ class Captcha
 		}
 	}
 
+	/**
+	 * Returns security code.
+	 *
+	 * @return string
+	 */
 	public function getCode()
 	{
 		return $this->config["code"];
+	}
+
+	/**
+	 * Sets custom security code
+	 *
+	 * @param string $code
+	 */
+	public function setCode($code)
+	{
+		$this->config["code"] = $code;
 	}
 
 	public function build()
